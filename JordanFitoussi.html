@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Intro to AR Day 1</title>
+			<meta charset="utf-8"><!-- this is to make this stay everywhere-->
+			 <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script><!-- this is a library from aframe.io (note the min.js) -->
+	</head>
+	<body>
+			<h1>
+				<p>Look at this box</p><!-- This is a paragraph-->
+			</h1>
+			<a-scene><!-- this lets us make 3d scenes. The a-frame library knows that when we say a-scene we are making a 3d scene-->
+			<a-box src="images/wood/crate.gif" height="5" width=6 "position="-1 -30 -3"color="yellow"></a-box><!--this is a box-->
+			<a-sky color="black" position="-1 0.5 -3" hight="100000" width="1000000"></a-sky><!--this is the sky-->
+			<a-plane src="https://eoimages.gsfc.nasa.gov/images/imagerecords/39000/39769/crater_lro_2009206_lrg.jpg" position="0 0 -4" rotation="-90 0 0" width="25" height="25" color="gray"></a-plane><!--This is the floor-->
+			<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="red"></a-cylinder><!--This is a cylinder-->
+			<a-sphere position="300 450 -300" radius="150" color="yellow"></a-sphere><!-- this is the sun-->
+			<a-sphere position="-300 150 0" radius="50" color="blue"></a-sphere><!-- this is the earth-->
+			</a-scene>
+	</body	
+</html>
+

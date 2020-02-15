@@ -1,0 +1,20 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3D MODELS!!</title>
+		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/cfe5f316/dist/aframe-extras.js"></script>
+	</head>
+	<body>
+		<a-scene>
+			<a-assets>
+				<img id="sky" src="https://spacenews.com/wp-content/uploads/2018/05/24359364107_152b0152ff_k-879x485.jpg">
+				<a-asset-item id="cesiumMan" src="https://compagnb.github.io/SU19_Intro2AR/models/CesiumMan.glb"></a-asset-item>
+			</a-assets>
+			
+			<a-sky src="#sky"></a-sky>	
+			<a-entity id="walker" gltf-model="#cesiumMan" position="0 0 -5" scale="2 2 2" animation-mixer><a-entity>
+		</a-scene>	
+	</body>
+</html>

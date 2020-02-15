@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Interaction!</title>
+		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+		<script>
+			AFRAME.registerComponent('change-color-on-hover',{
+				schema: {
+					color: {default:'lime'}
+				},
+				init: function (){
+					var data = this.data;
+					var el = this.el;
+					var defaultColor = el.getAttribute('material').color;
+						
+					el.addEventListener('mouseenter', function() {
+						el.setAttribute('color', data.color);
+					});
+							
+					el.addEventListener('mouseleave', function() {
+						el.setAttribute('color', defaultColor);
+					});
+				}
+			});		
+		</script>
+	</head>
+	<body>
+		<a-scene>
+			<a-box color="yellow" position="0 1 -4" change-color-on-hover="color: purple">
+			</a-box>
+			<a-camera><a-cursor></a-cursor><a-camera>
+		</a-scene>
+	</body>
+</html>
